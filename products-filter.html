@@ -1,0 +1,743 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/StudioKonKon/bootstrap-konkon@1.2.1-beta/dist/css/studio-konkon.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="keywords" content="">
+  <meta name="description" lang="en" content="">
+  <meta name="author" lang="en" content="FRYSTIC">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#d4e1f2">
+  <meta name="msapplication-navbutton-color" content="#d4e1f2">
+  <meta name="msapplication-TileColor" content="#d4e1f2">
+  <meta name="msapplication-TileImage" content="/icon-144x144.png">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="shortcut icon" href="img/icon/ico.ico">
+  <link rel="manifest" href="manifest.json">
+
+  <script src='js/jquery.min.js'></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/crypto-price.js"></script>
+  
+  <link rel="stylesheet" href="css/swiper.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" media="screen and (min-width: 100px) and (max-width: 499px)" href="css/mobile.css">
+  <link rel="stylesheet" media="screen and (min-width: 500px) and (max-width: 999px)" href="css/tablet.css">
+  <link rel="stylesheet" media="screen and (min-width: 1000px) and (max-width: 1399px)" href="css/mini-desktop.css">
+  <link rel="stylesheet" media="screen and (min-width: 1400px)" href="css/desktop.css">
+  
+  </head>
+  <body>
+  
+  
+    <div id="loader" class="center"></div>
+    <div class="backg"></div>
+    <span id="circle" class="circle"></span>
+  
+  <div class="top-menu">
+  
+  <div id="navbar-bg"><br><br><br><br><br></div>
+  
+  <div id="mySidenav" class="sidenav top-menu-item-container">
+    <a href="javascript:void(0)" class="closebtn1 mobile-only" onclick="closeNav1()">×</a>
+    <img class="logo desktop-only" src="img/logo.png">
+  
+    <a href="index.html">Home</a>
+    <a href="products-filter.html">Products</a>
+    <div class="dropdown">
+      <button class="dropbtn">Categories </button>
+      <div class="dropdown-content">
+            <a href="products-filter.html#Anime">Anime & Comics</a>
+            <a href="products-filter.html#Sport">Sport</a>
+            <a href="products-filter.html#Trade">Trade</a>
+            <a href="products-filter.html#Books">Books & Magazines</a>
+            <a href="products-filter.html#Game">Game</a>
+            <a href="products-filter.html#Stream">Stream</a>
+            <a href="products-filter.html#Education">Education</a>
+            <a href="products-filter.html#Meditation">Meditation</a>
+      </div>
+    </div> 
+    
+      <a href="terms.html">Feedbacks</a>
+      <a href="support.html">Support</a>
+          <form role="search" method="get" class="search-form desktop-only" action="">
+              <input type="search" class="search-field " placeholder=" Type something ..." value="" name="s">
+              <input type="submit" class="search-submit" value="Search">
+      </form>
+  </div>
+  </div>
+  
+  <div class="top mobile-only">
+  
+  <div id="own-sidemenu-btn" class="mobile-only">
+    <span onclick="openNav1()">
+        <img src="img/icon/menu.png"> 
+    </span>
+  </div>
+  
+  
+  <div class="mobile-logo">
+  <img class="logo mobile-only" src="img/logo.png">
+  </div>
+  
+    
+    <span id="searchModalBtn">
+      <img src="img/icon/search.png"> 
+  </span>
+  
+  </div>
+  
+  
+  <div id="searchModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close">×</span>
+      <div class="modal-body">
+        <p>  
+          </p><form role="search" method="get" class="search-form" action="../">
+                  <label> 
+                      <span class="screen-reader-text">Explore in +300 digital product</span>
+                      <input type="search" class="search-field" placeholder="type something ..." value="" name="s">
+                  </label>
+                  <input type="submit" class="search-submit" value="Go">
+              </form>
+  <p></p>
+        <br><br><br><br>
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+    <div class="toolbar">
+  
+      <img class="symbol" src="img/small.logo.png">
+  
+      <div class="flex-item-container">
+        <button 
+      class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+        <span><img src="img/icon/1.png"></span>
+       </button> 
+       <a href="shopping-cart.html"><span><img src="img/icon/2.png"></span></a>
+
+       <span><img src="img/icon/3.png"></span>
+
+       <span class="enableEthereumButton"><img src="img/icon/4.png"></span>
+
+       <a href="user-area.html"><span><img src="img/icon/5.png"></span></a>
+       
+      </div>
+    </div>
+      <script>
+
+        //web3.0 frontend test
+        const ethereumButton = document.querySelector(".enableEthereumButton");
+    
+    ethereumButton.addEventListener("click", () => {
+      //Will Start the metamask extension
+      ethereum.enable();
+    });
+      </script>
+    
+
+    <div class="center-container">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="container py-4">
+        <h1 class="h2 fw-bold mb-1">Category Products</h1>
+        <nav aria-label="breadcrumb" role="navigation">
+           <ol class="breadcrumb px-0">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Category</a></li>
+              <li class="breadcrumb-item active">Products</li>
+           </ol>
+        </nav>
+     </div>
+     <section class="container">
+        <div class="row g-4 mb-4">
+           <aside class="col-lg-3">
+              <div class="accordion">
+  
+                 <div class="accordion-item">
+                    <h2 class="accordion-header"
+                        id="accordion_a000">
+                       <button class="accordion-button"
+                               type="button"
+                               data-bs-toggle="collapse"
+                               data-bs-target="#accordion_b000"
+                               aria-expanded="true"
+                               aria-controls="accordion_b000">Categories</button>
+                    </h2>
+                    <div id="accordion_b000"
+                         class="accordion-collapse collapse show"
+                         aria-labelledby="accordion_a000"
+                         data-bs-parent="#accordion_a000">
+                       <div class="accordion-body pt-1">
+  
+  
+                          <ul class="list-unstyled mb-0">
+                            <li><a href="#">Anime & Comics</a></li>
+                            <li><a href="#">Sport</a></li>
+                            <li><a href="#">Trade</a></li>
+                            <li><a href="#">Books & Magazines</a></li>
+                            <li><a href="#">Game</a></li>
+                            <li><a href="#">Stream</a></li>
+                            <li><a href="#">Education</a></li>
+                            <li><a href="#">Meditation</a></li>
+                          </ul>
+  
+                       </div>
+                    </div>
+                 </div>
+  
+                 <div class="accordion-item mt-0">
+                    <h2 class="accordion-header"
+                        id="accordion_a001">
+                       <button class="accordion-button"
+                               type="button"
+                               data-bs-toggle="collapse"
+                               data-bs-target="#accordion_b001"
+                               aria-expanded="true"
+                               aria-controls="accordion_b001">Price</button>
+                    </h2>
+                    <div id="accordion_b001"
+                         class="accordion-collapse collapse show"
+                         aria-labelledby="accordion_a001"
+                         data-bs-parent="#accordion_a001">
+                       <div class="accordion-body pt-1">
+  
+                          <input type="range"
+                                 class="form-range" />
+  
+                          <div class="row row-cols-md-2 g-2 mb-3">
+                             <div class="col">
+                                <label>Min</label>
+                                <input class="form-control px-1"
+                                       placeholder="0"
+                                       type="number" />
+                             </div>
+                             <div class="col text-end">
+                                <label>Max</label>
+                                <input
+                                       class="form-control px-1"
+                                       placeholder="10000"
+                                       type="number" />
+                             </div>
+                          </div>
+  
+                          <button class="btn btn-primary w-100">Apply</button>
+  
+                       </div>
+                    </div>
+                 </div>
+  
+                 <div class="accordion-item mt-0">
+                    <h2 class="accordion-header"
+                        id="accordion_a002">
+                       <button class="accordion-button"
+                               type="button"
+                               data-bs-toggle="collapse"
+                               data-bs-target="#accordion_b002"
+                               aria-expanded="true"
+                               aria-controls="accordion_b002">Size</button>
+                    </h2>
+                    <div id="accordion_b002"
+                         class="accordion-collapse collapse show"
+                         aria-labelledby="accordion_a002"
+                         data-bs-parent="#accordion_a002">
+                       <div class="accordion-body pt-1">
+  
+                          <div class="row row-cols-3 g-1">
+                             <div class="col">
+                                <input type="checkbox"
+                                       class="btn-check"
+                                       id="sizeCheck_000"
+                                       autocomplete="off">
+                                <label class="btn btn-outline-primary w-100"
+                                       for="sizeCheck_000">XS</label>
+                             </div>
+                             <div class="col">
+                                <input type="checkbox"
+                                       class="btn-check"
+                                       id="sizeCheck_001"
+                                       autocomplete="off">
+                                <label class="btn btn-outline-primary w-100"
+                                       for="sizeCheck_001">S</label>
+                             </div>
+                             <div class="col">
+                                <input type="checkbox"
+                                       class="btn-check"
+                                       id="sizeCheck_002"
+                                       autocomplete="off">
+                                <label class="btn btn-outline-primary w-100"
+                                       for="sizeCheck_002">M</label>
+                             </div>
+                             <div class="col">
+                                <input type="checkbox"
+                                       class="btn-check"
+                                       id="sizeCheck_003"
+                                       autocomplete="off">
+                                <label class="btn btn-outline-primary w-100"
+                                       for="sizeCheck_003">L</label>
+                             </div>
+                             <div class="col">
+                                <input type="checkbox"
+                                       class="btn-check"
+                                       id="sizeCheck_004"
+                                       autocomplete="off">
+                                <label class="btn btn-outline-primary w-100"
+                                       for="sizeCheck_004">XL</label>
+                             </div>
+                          </div>
+  
+                       </div>
+                    </div>
+                 </div>
+  
+                 <div class="accordion-item mt-0">
+                    <h2 class="accordion-header"
+                        id="accordion_a003">
+                       <button class="accordion-button collapsed"
+                               type="button"
+                               data-bs-toggle="collapse"
+                               data-bs-target="#accordion_b003"
+                               aria-expanded="true"
+                               aria-controls="accordion_b003">Rating</button>
+                    </h2>
+                    <div id="accordion_b003"
+                         class="accordion-collapse collapse"
+                         aria-labelledby="accordion_a003"
+                         data-bs-parent="#accordion_a003">
+                       <div class="accordion-body pt-1">
+  
+                          <div class="form-check">
+                             <input class="form-check-input"
+                                    type="checkbox"
+                                    value="0"
+                                    id="formCheck_000"
+                                    checked />
+                             <label class="form-check-label"
+                                    for="formCheck_000">Excellent</label>
+                          </div>
+  
+                          <div class="form-check">
+                             <input class="form-check-input"
+                                    type="checkbox"
+                                    value="1"
+                                    id="formCheck_001"
+                                    checked />
+                             <label class="form-check-label"
+                                    for="formCheck_001">Great</label>
+                          </div>
+  
+                          <div class="form-check">
+                             <input class="form-check-input"
+                                    type="checkbox"
+                                    value="2"
+                                    id="formCheck_002"
+                                    checked />
+                             <label class="form-check-label"
+                                    for="formCheck_002">Okay</label>
+                          </div>
+  
+                          <div class="form-check">
+                             <input class="form-check-input"
+                                    type="checkbox"
+                                    value="3"
+                                    id="formCheck_003"
+                                    checked />
+                             <label class="form-check-label"
+                                    for="formCheck_003">Poor</label>
+                          </div>
+  
+                       </div>
+                    </div>
+                 </div>
+  
+              </div>
+           </aside>
+           <main class="col-lg-9">
+              <div class="row row-cols-1 row-cols-sm-2 row-cols-xl-3 mb-4 pb-4 g-4">
+  
+                 <div class="col"><a href="single-product.html">
+                    <div class="card h-100">
+                       <img class="card-img-top" src="product-img/9.png" alt="Placeholder">
+                       <div class="card-body pb-2">
+                          <a href="#"
+                             class="title">Lorem ipsum dolor sit amet</a>
+                       </div>
+                       <div class="card-footer pt-0">
+                          <div class="d-flex flex-row justify-content-between align-items-center">
+                             <span class="flex-grow-1">$4.00</span>
+                             <a href="#"
+                                class="btn btn-sm btn-outline-primary">
+                                <span>Add to cart</span>
+                                <i class="zmdi zmdi-shopping-cart"></i>
+                             </a>
+                          </div>
+                       </div>
+                    </div>
+                   </a></div>
+
+                 <div class="col"><a href="single-product.html">
+                    <div class="card h-100">
+                       <img class="card-img-top" src="product-img/10.png" alt="Placeholder">
+                       <div class="card-body pb-2">
+                          <a href="#"
+                             class="title">Aenean at ligula vel diam faucibus</a>
+                       </div>
+                       <div class="card-footer pt-0">
+                          <div class="d-flex flex-row justify-content-between align-items-center">
+                             <span class="flex-grow-1">$8.99</span>
+                             <a href="#"
+                                class="btn btn-sm btn-outline-primary">
+                                <span>Add to cart</span>
+                                <i class="zmdi zmdi-shopping-cart"></i>
+                             </a>
+                          </div>
+                       </div>
+                    </div>
+                 </a></div>
+  
+                 <div class="col"><a href="single-product.html">
+                    <div class="card h-100">
+                       <img class="card-img-top" src="product-img/3.png" alt="Placeholder">
+                       <div class="card-body pb-2">
+                          <a href="#"
+                             class="title">Duis aute irure dolor in reprehenderit</a>
+                       </div>
+                       <div class="card-footer pt-0">
+                          <div class="d-flex flex-row justify-content-between align-items-center">
+                             <span class="flex-grow-1">$456.12</span>
+                             <a href="#"
+                                class="btn btn-sm btn-outline-primary">
+                                <span>Add to cart</span>
+                                <i class="zmdi zmdi-shopping-cart"></i>
+                             </a>
+                          </div>
+                       </div>
+                    </div>
+                 </a></div>
+  
+                 <div class="col"><a href="single-product.html">
+                    <div class="card h-100">
+                       <img class="card-img-top" src="product-img/4.png" alt="Placeholder">
+                       <div class="card-body pb-2">
+                          <a href="#"
+                             class="title">Duis aute irure dolor in reprehenderit</a>
+                       </div>
+                       <div class="card-footer pt-0">
+                          <div class="d-flex flex-row justify-content-between align-items-center">
+                             <span class="flex-grow-1">$79.35</span>
+                             <a href="#"
+                                class="btn btn-sm btn-outline-primary">
+                                <span>Add to cart</span>
+                                <i class="zmdi zmdi-shopping-cart"></i>
+                             </a>
+                          </div>
+                       </div>
+                    </div>
+                 </a></div>
+  
+                 <div class="col"><a href="single-product.html">
+                    <div class="card h-100">
+                       <img class="card-img-top" src="product-img/7.png" alt="Placeholder">
+                       <div class="card-body pb-2">
+                          <a href="#"
+                             class="title">Mauris mattis condimentum feugiat</a>
+                       </div>
+                       <div class="card-footer pt-0">
+                          <div class="d-flex flex-row justify-content-between align-items-center">
+                             <span class="flex-grow-1">$2.99</span>
+                             <a href="#"
+                                class="btn btn-sm btn-outline-primary">
+                                <span>Add to cart</span>
+                                <i class="zmdi zmdi-shopping-cart"></i>
+                             </a>
+                          </div>
+                       </div>
+                    </div>
+                 </a></div>
+  
+                 <div class="col"><a href="single-product.html">
+                    <div class="card h-100">
+                       <img class="card-img-top" src="product-img/6.png" alt="Placeholder">
+                       <div class="card-body pb-2">
+                          <a href="#"
+                             class="title">Nunc quis mauris accumsan</a>
+                       </div>
+                       <div class="card-footer pt-0">
+                          <div class="d-flex flex-row justify-content-between align-items-center">
+                             <span class="flex-grow-1">$1.29</span>
+                             <a href="#"
+                                class="btn btn-sm btn-outline-primary">
+                                <span>Add to cart</span>
+                                <i class="zmdi zmdi-shopping-cart"></i>
+                             </a>
+                          </div>
+                       </div>
+                    </div>
+                 </a></div>
+  
+              </div>
+  
+              <nav>
+                 <ul class="pagination justify-content-center">
+                    <li class="page-item">
+                       <a class="page-link" href="#" aria-label="Previous">
+                          <span class="zmdi zmdi-chevron-left" aria-hidden="true"></span>
+                       </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item disabled"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item">
+                       <a class="page-link" href="#" aria-label="Next">
+                          <span class="zmdi zmdi-chevron-right" aria-hidden="true"></span>
+                       </a>
+                    </li>
+                 </ul>
+              </nav>
+  
+           </main>
+        </div>
+     </section>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   </div><!-- Center container ends -->
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+         <script>
+   
+   
+            
+   // search modal
+   
+   
+   var modal = document.getElementById("searchModal");
+     var btn = document.getElementById("searchModalBtn");
+     var span = document.getElementsByClassName("close")[0];
+     btn.onclick = function() {
+       modal.style.display = "block";
+     }
+     span.onclick = function() {
+       modal.style.display = "none";
+     }
+     window.onclick = function(event) {
+       if (event.target == modal) {
+         modal.style.display = "none";
+       }
+     }
+   
+   
+     
+   ///darkmode memory
+           var app = document.getElementsByTagName("BODY")[0];
+         if (localStorage.lightMode == "dark") {
+             app.setAttribute("light-mode", "dark");
+         }
+   
+         function toggle_light_mode() {
+             var app = document.getElementsByTagName("BODY")[0];
+             if (localStorage.lightMode == "dark") {
+                 localStorage.lightMode = "light";
+                 app.setAttribute("light-mode", "light");
+             } else {
+                 localStorage.lightMode = "dark";
+                 app.setAttribute("light-mode", "dark");
+             }       
+         }
+   
+     window.addEventListener("storage", function () {
+       if (localStorage.lightMode == "dark") {
+         app.setAttribute("light-mode", "dark");
+       } else {
+         app.setAttribute("light-mode", "light");
+       }
+     }, false);
+     
+   
+   ///
+   
+   /// top slider
+           
+           var swiper = new Swiper(".main-slider", {
+             spaceBetween: 30,
+             centeredSlides: true,
+             autoplay: {
+               delay: 5000,
+               disableOnInteraction: false,
+             },
+             pagination: {
+               el: ".swiper-pagination",
+               clickable: true,
+               dynamicBullets: true,
+             },
+         hashNavigation: {
+           watchState: true,
+         },
+           });
+   
+   
+   
+   /// product sliders 
+   
+   function dependsOnSize(){
+     if((window.innerWidth >= 200 && window.innerWidth <= 499 )){ return 1.8; } else {
+            if((window.innerWidth >= 500 && window.innerWidth <= 999 )){ return 3.5; } else {     
+                if((window.innerWidth >= 1000 && window.innerWidth <= 1399 )){ return 4; } else {
+                   if((window.innerWidth >= 1400)){ return 5.5; }
+     }}}};
+                   
+           var swiper = new Swiper(".scrolling-wrapper", {
+             spaceBetween: 0,
+             freeMode: true,
+             slidesPerView: dependsOnSize(),
+             hashNavigation: {
+                 watchState: true,
+              },
+           });
+   
+   
+   
+   
+   
+   
+   ///////////////////////////// The 01 Wrapper
+   
+     filterSelection("all")
+     function filterSelection(c) {
+       var x, i;
+       x = document.getElementsByClassName("filter01");
+       if (c == "all") c = "";
+       for (i = 0; i < x.length; i++) {
+         w3RemoveClass(x[i], "show");
+         if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+       }
+     }
+     
+     function w3AddClass(element, name) {
+       var i, arr1, arr2;
+       arr1 = element.className.split(" ");
+       arr2 = name.split(" ");
+       for (i = 0; i < arr2.length; i++) {
+         if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+       }
+     }
+     
+     function w3RemoveClass(element, name) {
+       var i, arr1, arr2;
+       arr1 = element.className.split(" ");
+       arr2 = name.split(" ");
+       for (i = 0; i < arr2.length; i++) {
+         while (arr1.indexOf(arr2[i]) > -1) {
+           arr1.splice(arr1.indexOf(arr2[i]), 1);     
+         }
+       }
+       element.className = arr1.join(" ");
+     }
+     
+     // Add active class to the current button (highlight it)
+     var btnContainer = document.getElementById("BtnContainer01");
+     var btns = btnContainer.getElementsByClassName("btn01");
+     for (var i = 0; i < btns.length; i++) {
+       btns[i].addEventListener("click", function(){
+         var current = document.getElementsByClassName("active");
+         current[0].className = current[0].className.replace(" active", "");
+         this.className += " active";
+       });
+     }
+   
+   
+   
+   
+   
+   
+     // When the user scrolls down 20px from the top of the document, slide down the navbar
+   window.onscroll = function() {scrollFunction()};
+   
+   function scrollFunction() {
+     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+       document.getElementById("navbar-bg").style.top = "0";
+     } else {
+       document.getElementById("navbar-bg").style.top = "-100px";
+     }
+   }
+   
+   
+   
+   
+       document.onreadystatechange = function() {
+                if (document.readyState !== "complete") {
+                    document.querySelector(
+                      "body").style.visibility = "";
+                    document.querySelector(
+                      "#loader").style.visibility = "visible";
+                } else {
+                    document.querySelector(
+                      "#loader").style.display = "none";
+                    document.querySelector(
+                      "body").style.visibility = "";
+                }
+            };
+   
+   
+   
+     </script>
+   
+   
+   
+   </body>
+   </html>
+   

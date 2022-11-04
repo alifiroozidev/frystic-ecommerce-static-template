@@ -1,0 +1,573 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/StudioKonKon/bootstrap-konkon@1.2.1-beta/dist/css/studio-konkon.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="keywords" content="">
+  <meta name="description" lang="en" content="">
+  <meta name="author" lang="en" content="FRYSTIC">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#d4e1f2">
+  <meta name="msapplication-navbutton-color" content="#d4e1f2">
+  <meta name="msapplication-TileColor" content="#d4e1f2">
+  <meta name="msapplication-TileImage" content="/icon-144x144.png">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="shortcut icon" href="img/icon/ico.ico">
+  <link rel="manifest" href="manifest.json">
+
+  <script src='js/jquery.min.js'></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/crypto-price.js"></script>
+  
+  <link rel="stylesheet" href="css/swiper.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" media="screen and (min-width: 100px) and (max-width: 499px)" href="css/mobile.css">
+  <link rel="stylesheet" media="screen and (min-width: 500px) and (max-width: 999px)" href="css/tablet.css">
+  <link rel="stylesheet" media="screen and (min-width: 1000px) and (max-width: 1399px)" href="css/mini-desktop.css">
+  <link rel="stylesheet" media="screen and (min-width: 1400px)" href="css/desktop.css">
+  
+  </head>
+  <body>
+  
+  
+    <div id="loader" class="center"></div>
+    <div class="backg"></div>
+    <span id="circle" class="circle"></span>
+  
+  <div class="top-menu">
+  
+  <div id="navbar-bg"><br><br><br><br><br></div>
+  
+  <div id="mySidenav" class="sidenav top-menu-item-container">
+    <a href="javascript:void(0)" class="closebtn1 mobile-only" onclick="closeNav1()">×</a>
+    <img class="logo desktop-only" src="img/logo.png">
+  
+    <a href="index.html">Home</a>
+    <a href="products-filter.html">Products</a>
+    <div class="dropdown">
+      <button class="dropbtn">Categories </button>
+      <div class="dropdown-content">
+            <a href="products-filter.html#Anime">Anime & Comics</a>
+            <a href="products-filter.html#Sport">Sport</a>
+            <a href="products-filter.html#Trade">Trade</a>
+            <a href="products-filter.html#Books">Books & Magazines</a>
+            <a href="products-filter.html#Game">Game</a>
+            <a href="products-filter.html#Stream">Stream</a>
+            <a href="products-filter.html#Education">Education</a>
+            <a href="products-filter.html#Meditation">Meditation</a>
+      </div>
+    </div> 
+    
+      <a href="terms.html">Feedbacks</a>
+      <a href="support.html">Support</a>
+          <form role="search" method="get" class="search-form desktop-only" action="">
+              <input type="search" class="search-field " placeholder=" Type something ..." value="" name="s">
+              <input type="submit" class="search-submit" value="Search">
+      </form>
+  </div>
+  </div>
+  
+  <div class="top mobile-only">
+  
+  <div id="own-sidemenu-btn" class="mobile-only">
+    <span onclick="openNav1()">
+        <img src="img/icon/menu.png"> 
+    </span>
+  </div>
+  
+  
+  <div class="mobile-logo">
+  <img class="logo mobile-only" src="img/logo.png">
+  </div>
+  
+    
+    <span id="searchModalBtn">
+      <img src="img/icon/search.png"> 
+  </span>
+  
+  </div>
+  
+  
+  <div id="searchModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close">×</span>
+      <div class="modal-body">
+        <p>  
+          </p><form role="search" method="get" class="search-form" action="../">
+                  <label> 
+                      <span class="screen-reader-text">Explore in +300 digital product</span>
+                      <input type="search" class="search-field" placeholder="type something ..." value="" name="s">
+                  </label>
+                  <input type="submit" class="search-submit" value="Go">
+              </form>
+  <p></p>
+        <br><br><br><br>
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+    <div class="toolbar">
+  
+      <img class="symbol" src="img/small.logo.png">
+  
+      <div class="flex-item-container">
+        <button 
+      class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+        <span><img src="img/icon/1.png"></span>
+       </button> 
+       <a href="shopping-cart.html"><span><img src="img/icon/2.png"></span></a>
+
+       <span><img src="img/icon/3.png"></span>
+
+       <span class="enableEthereumButton"><img src="img/icon/4.png"></span>
+
+       <a href="user-area.html"><span><img src="img/icon/5.png"></span></a>
+       
+      </div>
+    </div>
+      <script>
+
+        //web3.0 frontend test
+        const ethereumButton = document.querySelector(".enableEthereumButton");
+    
+    ethereumButton.addEventListener("click", () => {
+      //Will Start the metamask extension
+      ethereum.enable();
+    });
+      </script>
+    
+
+    <div class="center-container">
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+      <section>
+        <div class="container">
+          <div class="card row">
+                <div class="col-sm-12 col-md-12">
+                    <div class="row cart-wrapper">
+                        <div class="col-sm-8 col-md-8">
+                            <div class="cart-table-container">
+                                <table class="table table-cart">
+                                    <thead>
+                                        <tr>
+                                            <th class="thumbnail-col"></th>
+                                            <th class="product-col">Product</th>
+                                            <th class="price-col">Price</th>
+                                            <th class="qty-col">Quantity</th>
+                                            <th class="text-right">Subtotal</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="product-row">
+                                            <td>
+                                                <figure class="product-image-container">
+                                                    <a href="#!" class="product-image">
+                                                        <img src="product-img/16.png"
+                                                            alt="product">
+                                                    </a>
+    
+                                                    <a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
+                                                </figure>
+                                            </td>
+                                            <td class="product-col">
+                                                <h5 class="product-title">
+                                                    <a href="product.html">lorem ipsoum</a>
+                                                </h5>
+                                            </td>
+                                            <td>$17.90</td>
+                                            <td>
+                                                <div class="quantity-wrapper">
+                                                    <div class="input-group">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number">
+                                                                <span class="fa fa-minus"></span>
+                                                            </button>
+                                                        </span>
+                                                        <input type="text" name="quant[1]" class="form-control input-number"
+                                                            value="8" min="8" max="30">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number">
+                                                                <span class="fa fa-plus"></span>
+                                                            </button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-right"><span class="subtotal-price">$17.90</span></td>
+                                        </tr>
+    
+                                        <tr class="product-row">
+                                            <td>
+                                                <figure class="product-image-container">
+                                                    <a href="#!" class="product-image">
+                                                        <img src="product-img/15.png"
+                                                            alt="product">
+                                                    </a>
+    
+                                                    <a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
+                                                </figure>
+                                            </td>
+                                            <td class="product-col">
+                                                <h5 class="product-title">
+                                                    <a href="product.html">the product</a>
+                                                </h5>
+                                            </td>
+                                            <td>$17.90</td>
+                                            <td>
+                                                <div class="quantity-wrapper">
+                                                    <div class="input-group">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number">
+                                                                <span class="fa fa-minus"></span>
+                                                            </button>
+                                                        </span>
+                                                        <input type="text" name="quant[1]" class="form-control input-number"
+                                                            value="8" min="8" max="30">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number">
+                                                                <span class="fa fa-plus"></span>
+                                                            </button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-right"><span class="subtotal-price">$17.90</span></td>
+                                        </tr>
+    
+                                        <tr class="product-row">
+                                            <td>
+                                                <figure class="product-image-container">
+                                                    <a href="#!" class="product-image">
+                                                        <img src="product-img/13.png"
+                                                            alt="product">
+                                                    </a>
+    
+                                                    <a href="#" class="btn-remove icon-cancel" title="Remove Product"></a>
+                                                </figure>
+                                            </td>
+                                            <td class="product-col">
+                                                <h5 class="product-title">
+                                                    <a href="product.html">Men Watch</a>
+                                                </h5>
+                                            </td>
+                                            <td>$17.90</td>
+                                            <td>
+                                                <div class="quantity-wrapper">
+                                                    <div class="input-group">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number">
+                                                                <span class="fa fa-minus"></span>
+                                                            </button>
+                                                        </span>
+                                                        <input type="text" name="quant[1]" class="form-control input-number"
+                                                            value="8" min="8" max="30">
+                                                        <span class="input-group-btn">
+                                                            <button type="button" class="btn btn-default btn-number">
+                                                                <span class="fa fa-plus"></span>
+                                                            </button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="text-right"><span class="subtotal-price">$17.90</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-4">
+                            <div class="cart-summary">
+                                <h3>CART TOTALS</h3>
+    
+                                <table class="table table-totals">
+                                    <tbody>
+                                        <tr>
+                                            <td>Subtotal</td>
+                                            <td>$17.90</td>
+                                        </tr>
+    
+    
+                                        <tr>
+                                            <td colspan="2" class="text-left promo-code-area">
+                                                <h3>Promo Code</h3>
+    
+                                                <div class="cart-discount">
+                                                    <form action="#">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control form-control-sm"
+                                                                placeholder="Coupon Code" required="">
+                                                            <div class="input-group-append">
+                                                                <button class="btn apply-coupon-btn" type="submit">Apply
+                                                                    Coupon</button>
+                                                            </div>
+                                                        </div><!-- End .input-group -->
+                                                    </form>
+                                                </div>
+    
+    
+                                                <button type="submit" class="btn btn-shop btn-update-total">
+                                                    Update Totals
+                                                </button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+    
+                                    <tfoot>
+                                        <tr>
+                                            <td>Other charges</td>
+                                            <td>$17.90</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Delivery charges</td>
+                                            <td>$17.90</td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Total</b></td>
+                                            <td><b>$17.90</b></td>
+                                        </tr>
+                                    </tfoot>
+                                </table>
+    
+                                <div class="checkout-methods">
+                                    <a href="#!" class="btn btn-block btn-dark">Proceed to Checkout
+                                        <i class="fa fa-arrow-right"></i></a>
+                                </div>
+                            </div><!-- End .cart-summary -->
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div><!-- Center container ends -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+  
+  
+           
+  // search modal
+  
+  
+  var modal = document.getElementById("searchModal");
+    var btn = document.getElementById("searchModalBtn");
+    var span = document.getElementsByClassName("close")[0];
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  
+  
+    
+  ///darkmode memory
+          var app = document.getElementsByTagName("BODY")[0];
+        if (localStorage.lightMode == "dark") {
+            app.setAttribute("light-mode", "dark");
+        }
+  
+        function toggle_light_mode() {
+            var app = document.getElementsByTagName("BODY")[0];
+            if (localStorage.lightMode == "dark") {
+                localStorage.lightMode = "light";
+                app.setAttribute("light-mode", "light");
+            } else {
+                localStorage.lightMode = "dark";
+                app.setAttribute("light-mode", "dark");
+            }       
+        }
+  
+    window.addEventListener("storage", function () {
+      if (localStorage.lightMode == "dark") {
+        app.setAttribute("light-mode", "dark");
+      } else {
+        app.setAttribute("light-mode", "light");
+      }
+    }, false);
+    
+  
+  ///
+  
+  /// top slider
+          
+          var swiper = new Swiper(".main-slider", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+              delay: 5000,
+              disableOnInteraction: false,
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+              dynamicBullets: true,
+            },
+        hashNavigation: {
+          watchState: true,
+        },
+          });
+  
+  
+  
+  /// product sliders 
+  
+  function dependsOnSize(){
+    if((window.innerWidth >= 200 && window.innerWidth <= 499 )){ return 1.8; } else {
+           if((window.innerWidth >= 500 && window.innerWidth <= 999 )){ return 3.5; } else {     
+               if((window.innerWidth >= 1000 && window.innerWidth <= 1399 )){ return 4; } else {
+                  if((window.innerWidth >= 1400)){ return 5.5; }
+    }}}};
+                  
+          var swiper = new Swiper(".scrolling-wrapper", {
+            spaceBetween: 0,
+            freeMode: true,
+            slidesPerView: dependsOnSize(),
+            hashNavigation: {
+                watchState: true,
+             },
+          });
+  
+  
+  
+  
+  
+  
+  ///////////////////////////// The 01 Wrapper
+  
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("filter01");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+    
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("BtnContainer01");
+    var btns = btnContainer.getElementsByClassName("btn01");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+  
+  
+  
+  
+  
+  
+    // When the user scrolls down 20px from the top of the document, slide down the navbar
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      document.getElementById("navbar-bg").style.top = "0";
+    } else {
+      document.getElementById("navbar-bg").style.top = "-100px";
+    }
+  }
+  
+  
+  
+  
+      document.onreadystatechange = function() {
+               if (document.readyState !== "complete") {
+                   document.querySelector(
+                     "body").style.visibility = "";
+                   document.querySelector(
+                     "#loader").style.visibility = "visible";
+               } else {
+                   document.querySelector(
+                     "#loader").style.display = "none";
+                   document.querySelector(
+                     "body").style.visibility = "";
+               }
+           };
+  
+  
+  
+    </script>
+  
+  
+  
+  </body>
+  </html>
+  

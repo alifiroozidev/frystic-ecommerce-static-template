@@ -1,0 +1,760 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/StudioKonKon/bootstrap-konkon@1.2.1-beta/dist/css/studio-konkon.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="keywords" content="">
+  <meta name="description" lang="en" content="">
+  <meta name="author" lang="en" content="FRYSTIC">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#d4e1f2">
+  <meta name="msapplication-navbutton-color" content="#d4e1f2">
+  <meta name="msapplication-TileColor" content="#d4e1f2">
+  <meta name="msapplication-TileImage" content="/icon-144x144.png">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="shortcut icon" href="img/icon/ico.ico">
+  <link rel="manifest" href="manifest.json">
+
+  <script src='js/jquery.min.js'></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/crypto-price.js"></script>
+  
+  <link rel="stylesheet" href="css/swiper.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" media="screen and (min-width: 100px) and (max-width: 499px)" href="css/mobile.css">
+  <link rel="stylesheet" media="screen and (min-width: 500px) and (max-width: 999px)" href="css/tablet.css">
+  <link rel="stylesheet" media="screen and (min-width: 1000px) and (max-width: 1399px)" href="css/mini-desktop.css">
+  <link rel="stylesheet" media="screen and (min-width: 1400px)" href="css/desktop.css">
+  
+  </head>
+  <body>
+  
+  
+    <div id="loader" class="center"></div>
+    <div class="backg"></div>
+    <span id="circle" class="circle"></span>
+  
+  <div class="top-menu">
+  
+  <div id="navbar-bg"><br><br><br><br><br></div>
+  
+  <div id="mySidenav" class="sidenav top-menu-item-container">
+    <a href="javascript:void(0)" class="closebtn1 mobile-only" onclick="closeNav1()">×</a>
+    <img class="logo desktop-only" src="img/logo.png">
+  
+    <a href="index.html">Home</a>
+    <a href="products-filter.html">Products</a>
+    <div class="dropdown">
+      <button class="dropbtn">Categories </button>
+      <div class="dropdown-content">
+            <a href="products-filter.html#Anime">Anime & Comics</a>
+            <a href="products-filter.html#Sport">Sport</a>
+            <a href="products-filter.html#Trade">Trade</a>
+            <a href="products-filter.html#Books">Books & Magazines</a>
+            <a href="products-filter.html#Game">Game</a>
+            <a href="products-filter.html#Stream">Stream</a>
+            <a href="products-filter.html#Education">Education</a>
+            <a href="products-filter.html#Meditation">Meditation</a>
+      </div>
+    </div> 
+    
+      <a href="terms.html">Feedbacks</a>
+      <a href="support.html">Support</a>
+          <form role="search" method="get" class="search-form desktop-only" action="">
+              <input type="search" class="search-field " placeholder=" Type something ..." value="" name="s">
+              <input type="submit" class="search-submit" value="Search">
+      </form>
+  </div>
+  </div>
+  
+  <div class="top mobile-only">
+  
+  <div id="own-sidemenu-btn" class="mobile-only">
+    <span onclick="openNav1()">
+        <img src="img/icon/menu.png"> 
+    </span>
+  </div>
+  
+  
+  <div class="mobile-logo">
+  <img class="logo mobile-only" src="img/logo.png">
+  </div>
+  
+    
+    <span id="searchModalBtn">
+      <img src="img/icon/search.png"> 
+  </span>
+  
+  </div>
+  
+  
+  <div id="searchModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close">×</span>
+      <div class="modal-body">
+        <p>  
+          </p><form role="search" method="get" class="search-form" action="../">
+                  <label> 
+                      <span class="screen-reader-text">Explore in +300 digital product</span>
+                      <input type="search" class="search-field" placeholder="type something ..." value="" name="s">
+                  </label>
+                  <input type="submit" class="search-submit" value="Go">
+              </form>
+  <p></p>
+        <br><br><br><br>
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+    <div class="toolbar">
+  
+      <img class="symbol" src="img/small.logo.png">
+  
+      <div class="flex-item-container">
+        <button 
+      class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+        <span><img src="img/icon/1.png"></span>
+       </button> 
+       <a href="shopping-cart.html"><span><img src="img/icon/2.png"></span></a>
+
+       <span><img src="img/icon/3.png"></span>
+
+       <span class="enableEthereumButton"><img src="img/icon/4.png"></span>
+
+       <a href="user-area.html"><span><img src="img/icon/5.png"></span></a>
+       
+      </div>
+    </div>
+      <script>
+
+        //web3.0 frontend test
+        const ethereumButton = document.querySelector(".enableEthereumButton");
+    
+    ethereumButton.addEventListener("click", () => {
+      //Will Start the metamask extension
+      ethereum.enable();
+    });
+      </script>
+    
+
+    <div class="center-container">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+     <div class="flex-top-box-container">
+        <div class="crypto-price-box">
+          
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Coin</th>
+        <th>Price</th>
+        <th>24h</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class='crypto-icon' id="btcLogo"></span></td>
+        <td><strong>Bitcoin</strong></td>
+        <td><span id="btcPrice">loading...</span></td>
+        <td><span id="btcChange">loading...</span></td>
+      </tr>
+      <tr>
+        <td><span class='crypto-icon' id="ethLogo"></span></td>
+        <td><strong>Ethereum</strong></td>
+        <td><span id="ethPrice">loading...</span></td>
+        <td><span id="ethChange">loading...</span></td>
+      </tr>
+      <tr>
+        <td><span class='crypto-icon' id="dogeLogo"></span></td>
+        <td><strong>Binance</strong></td>
+        <td><span id="dogePrice">loading...</span></td>
+        <td><span id="dogeChange">loading...</span></td>
+      </tr>
+      <tr>
+      <tr>
+        <td><span class='crypto-icon' id="shibLogo"></span></td>
+        <td><strong>Polygon</strong></td>
+        <td><span id="shibPrice">loading...</span></td>
+        <td><span id="shibChange">loading...</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<!-- <p style="padding-top: 5px;">Updated: <span id="btcTime">...loading...</span></p>-->
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+
+        </div><!--crypto price ending-->
+  
+  
+
+
+
+
+
+      <div class="swiper main-slider">
+        <div class="swiper-wrapper">
+
+    <!-- MAKE IT DYNAMIC -->
+          <a href=""></a><div class="swiper-slide"><img src="topslider/1.png" alt=""></div></a>
+          <a href=""></a><div class="swiper-slide"><img src="topslider/2.png" alt=""></div></a>
+          <a href=""></a><div class="swiper-slide"><img src="topslider/3.png" alt=""></div></a>
+          <a href=""></a><div class="swiper-slide"><img src="topslider/4.png" alt=""></div></a>
+          <a href=""></a><div class="swiper-slide"><img src="topslider/5.png" alt=""></div></a>
+
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+
+  </div><!-- flex top box div -->
+
+
+
+
+  <div class="wrapper-title-filter-container">
+  <p class="wrapper-title">Featured products</p>
+  </div>
+       <div id="scr01" class="swiper scrolling-wrapper">
+        <div class="swiper-wrapper">
+          <!-- MAKE IT DYNAMIC -->
+      
+                  
+              <a href="single-product.html" class="swiper-slide pcard filter02 trade">
+                <img class="product-img" src="product-img/11.png">
+                <div class="product-info-container">
+                  <p class="product-slide-category">Sports</p>
+                  <p class="product-slide-title">The Product Title</p>
+                  <p class="product-slide-price">$30.4</p>
+                </div>
+              </a>
+                  
+              <a href="single-product.html" class="swiper-slide pcard filter02 trade">
+                <img class="product-img" src="product-img/12.png">
+                <div class="product-info-container">
+                  <p class="product-slide-category">Sports</p>
+                  <p class="product-slide-title">The Product Title</p>
+                  <p class="product-slide-price">$30.4</p>
+                </div>
+              </a>
+      
+      
+              <a href="single-product.html" class="swiper-slide pcard filter02 meditation">
+                <img class="product-img" src="product-img/6.png">
+                <div class="product-info-container">
+                  <p class="product-slide-category">Sports</p>
+                  <p class="product-slide-title">The Product Title</p>
+                  <p class="product-slide-price">$30.4</p>
+                </div>
+              </a>
+                  
+              <a href="single-product.html" class="swiper-slide pcard filter02 trade">
+                <img class="product-img" src="product-img/7.png">
+                <div class="product-info-container">
+                  <p class="product-slide-category">Sports</p>
+                  <p class="product-slide-title">The Product Title</p>
+                  <p class="product-slide-price">$30.4</p>
+                </div>
+              </a>
+                
+      
+              <a href="single-product.html" class="swiper-slide pcard filter02 education">
+                <img class="product-img" src="product-img/16.png">
+                <div class="product-info-container">
+                  <p class="product-slide-category">Sports</p>
+                  <p class="product-slide-title">The Product Title</p>
+                  <p class="product-slide-price">$30.4</p>
+                </div>
+              </a>
+
+          <a href="single-product.html" class="swiper-slide pcard filter02 sport">
+            <img class="product-img" src="product-img/8.png">
+            <div class="product-info-container">
+              <p class="product-slide-category">Sports</p>
+              <p class="product-slide-title">The Product Title</p>
+              <p class="product-slide-price">$30.4</p>
+            </div>
+          </a>
+              
+          <a href="single-product.html" class="swiper-slide pcard filter02 game">
+            <img class="product-img" src="product-img/9.png">
+            <div class="product-info-container">
+              <p class="product-slide-category">Sports</p>
+              <p class="product-slide-title">The Product Title</p>
+              <p class="product-slide-price">$30.4</p>
+            </div>
+          </a>
+      
+      
+              <a href="single-product.html" class="swiper-slide pcard filter02 trade">
+                <img class="product-img" src="product-img/2.gif">
+                <div class="product-info-container">
+                  <p class="product-slide-category">Sports</p>
+                  <p class="product-slide-title">The Product Title</p>
+                  <p class="product-slide-price">$30.4</p>
+                </div>
+              </a>
+                  
+
+  
+            <div class="swiper-slide"></div>
+          </div>
+        </div>
+      
+
+
+
+
+        <div class="wrapper-title-filter-container">
+          <p class="wrapper-title">For you</p>
+          </div>
+        
+             <div id="scr01" class="swiper scrolling-wrapper">
+              <div class="swiper-wrapper">
+                <!-- MAKE IT DYNAMIC -->
+            
+                        
+                    <a href="single-product.html" class="swiper-slide pcard filter02 trade">
+                      <img class="product-img" src="product-img/11.png">
+                      <div class="product-info-container">
+                        <p class="product-slide-category">Sports</p>
+                        <p class="product-slide-title">The Product Title</p>
+                        <p class="product-slide-price">$30.4</p>
+                      </div>
+                    </a>
+                        
+                    <a href="single-product.html" class="swiper-slide pcard filter02 trade">
+                      <img class="product-img" src="product-img/12.png">
+                      <div class="product-info-container">
+                        <p class="product-slide-category">Sports</p>
+                        <p class="product-slide-title">The Product Title</p>
+                        <p class="product-slide-price">$30.4</p>
+                      </div>
+                    </a>
+            
+            
+                    <a href="single-product.html" class="swiper-slide pcard filter02 meditation">
+                      <img class="product-img" src="product-img/6.png">
+                      <div class="product-info-container">
+                        <p class="product-slide-category">Sports</p>
+                        <p class="product-slide-title">The Product Title</p>
+                        <p class="product-slide-price">$30.4</p>
+                      </div>
+                    </a>
+                        
+                    <a href="single-product.html" class="swiper-slide pcard filter02 trade">
+                      <img class="product-img" src="product-img/7.png">
+                      <div class="product-info-container">
+                        <p class="product-slide-category">Sports</p>
+                        <p class="product-slide-title">The Product Title</p>
+                        <p class="product-slide-price">$30.4</p>
+                      </div>
+                    </a>
+                      
+            
+                    <a href="single-product.html" class="swiper-slide pcard filter02 education">
+                      <img class="product-img" src="product-img/16.png">
+                      <div class="product-info-container">
+                        <p class="product-slide-category">Sports</p>
+                        <p class="product-slide-title">The Product Title</p>
+                        <p class="product-slide-price">$30.4</p>
+                      </div>
+                    </a>
+  
+                <a href="single-product.html" class="swiper-slide pcard filter02 sport">
+                  <img class="product-img" src="product-img/8.png">
+                  <div class="product-info-container">
+                    <p class="product-slide-category">Sports</p>
+                    <p class="product-slide-title">The Product Title</p>
+                    <p class="product-slide-price">$30.4</p>
+                  </div>
+                </a>
+                    
+                <a href="single-product.html" class="swiper-slide pcard filter02 game">
+                  <img class="product-img" src="product-img/9.png">
+                  <div class="product-info-container">
+                    <p class="product-slide-category">Sports</p>
+                    <p class="product-slide-title">The Product Title</p>
+                    <p class="product-slide-price">$30.4</p>
+                  </div>
+                </a>
+            
+            
+                    <a href="single-product.html" class="swiper-slide pcard filter02 trade">
+                      <img class="product-img" src="product-img/2.gif">
+                      <div class="product-info-container">
+                        <p class="product-slide-category">Sports</p>
+                        <p class="product-slide-title">The Product Title</p>
+                        <p class="product-slide-price">$30.4</p>
+                      </div>
+                    </a>
+                        
+  
+        
+                  <div class="swiper-slide"></div>
+                </div>
+              </div>
+            
+
+
+
+
+
+              <div class="wrapper-title-filter-container">
+                <img class="ads-img" src="topslider/zzz1.png">
+                <img class="ads-img" src="topslider/zzz2.png">
+              </div>
+              
+        
+
+
+
+
+
+
+      <div class="wrapper-title-filter-container">
+        <p class="wrapper-title">For you</p>
+        </div>
+      
+           <div id="scr01" class="swiper scrolling-wrapper">
+            <div class="swiper-wrapper">
+              <!-- MAKE IT DYNAMIC -->
+          
+                      
+                  <a href="single-product.html" class="swiper-slide pcard filter02 trade">
+                    <img class="product-img" src="product-img/11.png">
+                    <div class="product-info-container">
+                      <p class="product-slide-category">Sports</p>
+                      <p class="product-slide-title">The Product Title</p>
+                      <p class="product-slide-price">$30.4</p>
+                    </div>
+                  </a>
+                      
+                  <a href="single-product.html" class="swiper-slide pcard filter02 trade">
+                    <img class="product-img" src="product-img/12.png">
+                    <div class="product-info-container">
+                      <p class="product-slide-category">Sports</p>
+                      <p class="product-slide-title">The Product Title</p>
+                      <p class="product-slide-price">$30.4</p>
+                    </div>
+                  </a>
+          
+          
+                  <a href="single-product.html" class="swiper-slide pcard filter02 meditation">
+                    <img class="product-img" src="product-img/6.png">
+                    <div class="product-info-container">
+                      <p class="product-slide-category">Sports</p>
+                      <p class="product-slide-title">The Product Title</p>
+                      <p class="product-slide-price">$30.4</p>
+                    </div>
+                  </a>
+                      
+                  <a href="single-product.html" class="swiper-slide pcard filter02 trade">
+                    <img class="product-img" src="product-img/7.png">
+                    <div class="product-info-container">
+                      <p class="product-slide-category">Sports</p>
+                      <p class="product-slide-title">The Product Title</p>
+                      <p class="product-slide-price">$30.4</p>
+                    </div>
+                  </a>
+                    
+          
+                  <a href="single-product.html" class="swiper-slide pcard filter02 education">
+                    <img class="product-img" src="product-img/16.png">
+                    <div class="product-info-container">
+                      <p class="product-slide-category">Sports</p>
+                      <p class="product-slide-title">The Product Title</p>
+                      <p class="product-slide-price">$30.4</p>
+                    </div>
+                  </a>
+
+              <a href="single-product.html" class="swiper-slide pcard filter02 sport">
+                <img class="product-img" src="product-img/8.png">
+                <div class="product-info-container">
+                  <p class="product-slide-category">Sports</p>
+                  <p class="product-slide-title">The Product Title</p>
+                  <p class="product-slide-price">$30.4</p>
+                </div>
+              </a>
+                  
+              <a href="single-product.html" class="swiper-slide pcard filter02 game">
+                <img class="product-img" src="product-img/9.png">
+                <div class="product-info-container">
+                  <p class="product-slide-category">Sports</p>
+                  <p class="product-slide-title">The Product Title</p>
+                  <p class="product-slide-price">$30.4</p>
+                </div>
+              </a>
+          
+          
+                  <a href="single-product.html" class="swiper-slide pcard filter02 trade">
+                    <img class="product-img" src="product-img/2.gif">
+                    <div class="product-info-container">
+                      <p class="product-slide-category">Sports</p>
+                      <p class="product-slide-title">The Product Title</p>
+                      <p class="product-slide-price">$30.4</p>
+                    </div>
+                  </a>
+                      
+
+      
+                <div class="swiper-slide"></div>
+              </div>
+            </div>
+          
+      
+           
+
+
+
+
+
+            <div class="wrapper-title-filter-container">
+              <img class="ads-img" src="topslider/zzz3.png">
+              <img class="ads-img" src="topslider/zzz4.png">
+            </div>
+            
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!-- Center container ends -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+
+
+         
+// search modal
+
+
+var modal = document.getElementById("searchModal");
+  var btn = document.getElementById("searchModalBtn");
+  var span = document.getElementsByClassName("close")[0];
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+
+  
+///darkmode memory
+        var app = document.getElementsByTagName("BODY")[0];
+      if (localStorage.lightMode == "dark") {
+          app.setAttribute("light-mode", "dark");
+      }
+
+      function toggle_light_mode() {
+          var app = document.getElementsByTagName("BODY")[0];
+          if (localStorage.lightMode == "dark") {
+              localStorage.lightMode = "light";
+              app.setAttribute("light-mode", "light");
+          } else {
+              localStorage.lightMode = "dark";
+              app.setAttribute("light-mode", "dark");
+          }       
+      }
+
+  window.addEventListener("storage", function () {
+    if (localStorage.lightMode == "dark") {
+      app.setAttribute("light-mode", "dark");
+    } else {
+      app.setAttribute("light-mode", "light");
+    }
+  }, false);
+  
+
+///
+
+/// top slider
+        
+        var swiper = new Swiper(".main-slider", {
+          spaceBetween: 30,
+          centeredSlides: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+          },
+      hashNavigation: {
+        watchState: true,
+      },
+        });
+
+
+
+/// product sliders 
+
+function dependsOnSize(){
+  if((window.innerWidth >= 200 && window.innerWidth <= 499 )){ return 1.8; } else {
+         if((window.innerWidth >= 500 && window.innerWidth <= 999 )){ return 3.5; } else {     
+             if((window.innerWidth >= 1000 && window.innerWidth <= 1399 )){ return 4; } else {
+                if((window.innerWidth >= 1400)){ return 5.5; }
+  }}}};
+                
+        var swiper = new Swiper(".scrolling-wrapper", {
+          spaceBetween: 0,
+          freeMode: true,
+          slidesPerView: dependsOnSize(),
+          hashNavigation: {
+              watchState: true,
+           },
+        });
+
+
+
+
+
+
+///////////////////////////// The 01 Wrapper
+
+  filterSelection("all")
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filter01");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+  
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+  }
+  
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+  
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("BtnContainer01");
+  var btns = btnContainer.getElementsByClassName("btn01");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+
+
+
+
+
+
+  // When the user scrolls down 20px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar-bg").style.top = "0";
+  } else {
+    document.getElementById("navbar-bg").style.top = "-100px";
+  }
+}
+
+
+
+
+    document.onreadystatechange = function() {
+             if (document.readyState !== "complete") {
+                 document.querySelector(
+                   "body").style.visibility = "";
+                 document.querySelector(
+                   "#loader").style.visibility = "visible";
+             } else {
+                 document.querySelector(
+                   "#loader").style.display = "none";
+                 document.querySelector(
+                   "body").style.visibility = "";
+             }
+         };
+
+
+
+  </script>
+
+
+
+</body>
+</html>

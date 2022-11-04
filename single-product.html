@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/StudioKonKon/bootstrap-konkon@1.2.1-beta/dist/css/studio-konkon.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="keywords" content="">
+  <meta name="description" lang="en" content="">
+  <meta name="author" lang="en" content="FRYSTIC">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#d4e1f2">
+  <meta name="msapplication-navbutton-color" content="#d4e1f2">
+  <meta name="msapplication-TileColor" content="#d4e1f2">
+  <meta name="msapplication-TileImage" content="/icon-144x144.png">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="shortcut icon" href="img/icon/ico.ico">
+  <link rel="manifest" href="manifest.json">
+
+  <script src='js/jquery.min.js'></script>
+  <script src="js/swiper.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/crypto-price.js"></script>
+  
+  <link rel="stylesheet" href="css/swiper.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" media="screen and (min-width: 100px) and (max-width: 499px)" href="css/mobile.css">
+  <link rel="stylesheet" media="screen and (min-width: 500px) and (max-width: 999px)" href="css/tablet.css">
+  <link rel="stylesheet" media="screen and (min-width: 1000px) and (max-width: 1399px)" href="css/mini-desktop.css">
+  <link rel="stylesheet" media="screen and (min-width: 1400px)" href="css/desktop.css">
+  
+  </head>
+  <body>
+  
+  
+    <div id="loader" class="center"></div>
+    <div class="backg"></div>
+    <span id="circle" class="circle"></span>
+  
+  <div class="top-menu">
+  
+  <div id="navbar-bg"><br><br><br><br><br></div>
+  
+  <div id="mySidenav" class="sidenav top-menu-item-container">
+    <a href="javascript:void(0)" class="closebtn1 mobile-only" onclick="closeNav1()">×</a>
+    <img class="logo desktop-only" src="img/logo.png">
+  
+    <a href="index.html">Home</a>
+    <a href="products-filter.html">Products</a>
+    <div class="dropdown">
+      <button class="dropbtn">Categories </button>
+      <div class="dropdown-content">
+            <a href="products-filter.html#Anime">Anime & Comics</a>
+            <a href="products-filter.html#Sport">Sport</a>
+            <a href="products-filter.html#Trade">Trade</a>
+            <a href="products-filter.html#Books">Books & Magazines</a>
+            <a href="products-filter.html#Game">Game</a>
+            <a href="products-filter.html#Stream">Stream</a>
+            <a href="products-filter.html#Education">Education</a>
+            <a href="products-filter.html#Meditation">Meditation</a>
+      </div>
+    </div> 
+    
+      <a href="terms.html">Feedbacks</a>
+      <a href="support.html">Support</a>
+          <form role="search" method="get" class="search-form desktop-only" action="">
+              <input type="search" class="search-field " placeholder=" Type something ..." value="" name="s">
+              <input type="submit" class="search-submit" value="Search">
+      </form>
+  </div>
+  </div>
+  
+  <div class="top mobile-only">
+  
+  <div id="own-sidemenu-btn" class="mobile-only">
+    <span onclick="openNav1()">
+        <img src="img/icon/menu.png"> 
+    </span>
+  </div>
+  
+  
+  <div class="mobile-logo">
+  <img class="logo mobile-only" src="img/logo.png">
+  </div>
+  
+    
+    <span id="searchModalBtn">
+      <img src="img/icon/search.png"> 
+  </span>
+  
+  </div>
+  
+  
+  <div id="searchModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <span class="close">×</span>
+      <div class="modal-body">
+        <p>  
+          </p><form role="search" method="get" class="search-form" action="../">
+                  <label> 
+                      <span class="screen-reader-text">Explore in +300 digital product</span>
+                      <input type="search" class="search-field" placeholder="type something ..." value="" name="s">
+                  </label>
+                  <input type="submit" class="search-submit" value="Go">
+              </form>
+  <p></p>
+        <br><br><br><br>
+      </div>
+    </div>
+  </div>
+  
+  
+
+
+    <div class="toolbar">
+  
+      <img class="symbol" src="img/small.logo.png">
+  
+      <div class="flex-item-container">
+        <button 
+      class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+        <span><img src="img/icon/1.png"></span>
+       </button> 
+       <a href="shopping-cart.html"><span><img src="img/icon/2.png"></span></a>
+
+       <span><img src="img/icon/3.png"></span>
+
+       <span class="enableEthereumButton"><img src="img/icon/4.png"></span>
+
+       <a href="user-area.html"><span><img src="img/icon/5.png"></span></a>
+       
+      </div>
+    </div>
+      <script>
+
+        //web3.0 frontend test
+        const ethereumButton = document.querySelector(".enableEthereumButton");
+    
+    ethereumButton.addEventListener("click", () => {
+      //Will Start the metamask extension
+      ethereum.enable();
+    });
+      </script>
+    
+
+    <div class="center-container">
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container py-4">
+    <!-- Product Card //-->
+    <div class="card card-body mb-5 single-product">
+       <div class="row row-cols-1 row-cols-lg-2 g-2">
+          <!-- Section: Product Image #1 //-->
+          <div class="col d-none d-lg-block">
+             <img class="w-100 rounded single-product-img" src="product-img/12.png">
+          </div>
+          <!-- Section: Product Body //-->
+          <div class="col">
+             <div class="h-100 d-flex flex-column">
+                <!-- Section: Product Infomation //-->
+                <div class="flex-grow-1">
+                   <div class="h-100 d-flex flex-column">
+                      <div class="flex-grow-1">
+                         <div class="row row-cols-auto mb-3 g-1 text-uppercase">
+                            <div class="col">
+                               <span class="badge bg-primary text-white rounded-pill">Game</span>
+                            </div>
+                            <div class="col">
+                               <span class="badge bg-dark text-white rounded-pill">PS5</span>
+                            </div>
+                         </div>
+                         <h5 class="text-muted text-uppercase mb-1">Playstation</h5>
+                         <h3>Lorem ipsum dolor sit amet</h3>
+                         <div class="fs-4 fw-bold mb-2">$49.99</div>
+                      </div>
+                      <p class="small mb-0"><span class="fw-bold">Release date:</span> 31 October 2021</p>
+                   </div>
+                </div>
+                <!-- Section: Product Image #2 //-->
+                <div class="mt-2 d-block d-lg-none">
+                   <img class="w-100 rounded" src="https://via.placeholder.com/500">
+                </div>
+                <!-- Section: Product Format //-->
+                <div class="mt-2">
+                   <hr class="mt-0 mb-2">
+                   <h6 class="text-uppercase fw-bold mb-2">Format</h6>
+                   <div class="">
+                      <input type="radio" class="btn-check" name="productformats" id="product_format_1" autocomplete="off" checked="">
+                      <label class="btn btn-outline-primary me-1" for="product_format_1">Physical</label>
+                      <input type="radio" class="btn-check" name="productformats" id="product_format_2" autocomplete="off">
+                      <label class="btn btn-outline-primary" for="product_format_2">Digital</label>
+                   </div>
+                </div>
+                <!-- Section: Product Quantity //-->
+                <div class="mt-2">
+                   <hr class="mt-0 mb-2">
+                   <h6 class="text-uppercase mb-0">Quantity</h6>
+                   <div class="d-flex flex-row flex-wrap flex-md-nowrap align-items-center">
+                      <div class="flex-grow-1 mt-2">
+                         <div class="d-flex flex-row flex-nowrap">
+                            <button class="btn btn-secondary" type="button"><i class="zmdi zmdi-minus"></i></button>
+                            <input type="text" class="form-control border-0 bg-white text-center px-0 mx-1 w-25 fw-bold user-select-none pe-none" value="1" min="1" max="999" readonly="">
+                            <button class="btn btn-secondary" type="button"><i class="zmdi zmdi-plus"></i></button>
+                         </div>
+                      </div>
+                      <div class="mt-2 d-flex flex-row flex-nowrap align-items-center">
+                         <button class="btn btn-primary text-uppercase text-nowrap me-2">Add to Cart</button>
+                         <button class="btn btn-secondary text-uppercase rounded-circle d-flex align-items-center justify-content-center" style="width:2.5rem;height:2.5rem;padding:0px;font-size:1.25rem;">
+                            <i class="zmdi zmdi-favorite-outline"></i>
+                         </button>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+    
+    <!-- Product Detailed Information //-->
+    <div class="card card-body mb-4 single-product">
+       <h4 class="fw-bold mb-0">Product details</h4>
+       <p class="mb-3 text-muted"><span class="fw-bold">Release date:</span> 31 October 2021</p>
+       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porttitor eleifend justo eu faucibus. Suspendisse eu est eget ex vehicula mattis. Phasellus bibendum maximus hendrerit. Morbi malesuada, nisi nec tempor ultricies, nibh nisi rutrum metus, nec auctor metus nunc a nisi. Donec mollis rhoncus eros id aliquet.</p>
+       <p>Nulla dignissim nisl sed augue malesuada, a tempor purus convallis. Vivamus porta mattis malesuada. Duis vel ante nec sapien scelerisque euismod. Sed nibh erat, maximus iaculis vulputate id, iaculis ut felis. Suspendisse vestibulum cursus eleifend.</p>
+       <p class="mb-5">Cras in felis porttitor, dictum magna ut, hendrerit ante. Quisque consectetur erat ac augue porttitor sagittis. Integer quis sodales turpis, ut scelerisque velit. Maecenas vel porta augue.</p>
+       <br>
+       <p class="mb-1"><span class="fw-bold">Category: </span> Single Player, Onilne Multiplayer</p>
+       <p class="mb-1"><span class="fw-bold">Player: </span> 1 - 4</p>
+       <p class="mb-1"><span class="fw-bold">Publisher: </span> Studio KonKon</p>
+       <p class="mb-0"><span class="fw-bold">Languages: </span> English, French, German, Spanish, Italian, Japanese, Korean, Dutch, Russian</p>
+    </div>
+    <!-- Product Nav //-->
+    <div class="accordion mb-5" id="accordionProduct">
+
+       <div class="accordion-item">
+          <h2 class="accordion-header" id="productNavHead1">
+             <button class="accordion-button bg-light text-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#productNavBody1" aria-expanded="false" aria-controls="productNavBody1">Product Overview</button>
+          </h2>
+          <div id="productNavBody1" class="accordion-collapse collapse" aria-labelledby="productNavHead1" data-bs-parent="#accordionProduct" style="">
+             <div class="accordion-body">
+                <div class="row row-cols-1 row-cols-lg-2 g-4">
+                   <div class="col">
+                      <div class="ratio ratio-16x9">
+                         <iframe width="560" height="315" src="https://www.youtube.com/embed/vYrvAQvG2EQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                      </div>
+                   </div>
+                   <div class="col">
+                      <h4>Tchaikovsky: The Nutcracker (suite), Op. 71a - 4. Russian Dance (Trepak)</h4>
+                      <p>The Nutcracker is a two act ballet, originally choreographed by Marius Petipa and Lev Ivanov and with a score by Pyotr Ilych Tchaikovski (Op. 71).</p>
+                      <p>The libretto is adopted from E.T.A Hoffman's story The Nutcracker and the Mouse King. It was premiered in 1892 and, though it was not a success, the 20-minute suite Tchaikovsky extracted from it was.</p>
+                      <p class="mb-0">Despite this, the complete Nutcracker becoming one of Tchaikovsky's most famous compositions.</p>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+
+       <div class="accordion-item">
+          <h2 class="accordion-header" id="productNavHead2">
+             <button class="accordion-button bg-light text-dark collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#productNavBody2" aria-expanded="false" aria-controls="productNavBody2">Delivery &amp; Returns</button>
+          </h2>
+          <div id="productNavBody2" class="accordion-collapse collapse" aria-labelledby="productNavHead2" data-bs-parent="#accordionProduct" style="">
+             <div class="accordion-body">
+                <h4>Cancellation and Returns</h4>
+                <p>Donec sed venenatis orci. Proin ultrices dignissim nibh a egestas. Sed congue cursus neque vel pellentesque. Aenean bibendum purus at molestie efficitur. Aenean fermentum lacus et magna auctor, non molestie est vulputate. </p>
+                <p>Mauris libero velit, vehicula et tincidunt nec, eleifend id erat. Donec dictum tincidunt erat et tincidunt. Quisque sed eleifend risus. Nullam molestie non massa eu lacinia. Fusce lacinia nisi velit.</p>
+                <p>Nulla a gravida purus. Sed quam ipsum, tempor ut enim semper, tempor elementum mauris. Nunc mollis enim sed mi tincidunt interdum. Duis aliquam finibus posuere. Ut eu augue massa. Quisque bibendum diam ut quam congue, rutrum feugiat turpis tincidunt. Pellentesque ac venenatis justo, sit amet condimentum ligula.</p>
+                <p>Please review our <a href="#">FAQ</a> for further information.</p>
+             </div>
+          </div>
+       </div>
+
+    </div>
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!-- Center container ends -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+
+
+         
+// search modal
+
+
+var modal = document.getElementById("searchModal");
+  var btn = document.getElementById("searchModalBtn");
+  var span = document.getElementsByClassName("close")[0];
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+
+  
+///darkmode memory
+        var app = document.getElementsByTagName("BODY")[0];
+      if (localStorage.lightMode == "dark") {
+          app.setAttribute("light-mode", "dark");
+      }
+
+      function toggle_light_mode() {
+          var app = document.getElementsByTagName("BODY")[0];
+          if (localStorage.lightMode == "dark") {
+              localStorage.lightMode = "light";
+              app.setAttribute("light-mode", "light");
+          } else {
+              localStorage.lightMode = "dark";
+              app.setAttribute("light-mode", "dark");
+          }       
+      }
+
+  window.addEventListener("storage", function () {
+    if (localStorage.lightMode == "dark") {
+      app.setAttribute("light-mode", "dark");
+    } else {
+      app.setAttribute("light-mode", "light");
+    }
+  }, false);
+  
+
+///
+
+/// top slider
+        
+        var swiper = new Swiper(".main-slider", {
+          spaceBetween: 30,
+          centeredSlides: true,
+          autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+          },
+      hashNavigation: {
+        watchState: true,
+      },
+        });
+
+
+
+/// product sliders 
+
+function dependsOnSize(){
+  if((window.innerWidth >= 200 && window.innerWidth <= 499 )){ return 1.8; } else {
+         if((window.innerWidth >= 500 && window.innerWidth <= 999 )){ return 3.5; } else {     
+             if((window.innerWidth >= 1000 && window.innerWidth <= 1399 )){ return 4; } else {
+                if((window.innerWidth >= 1400)){ return 5.5; }
+  }}}};
+                
+        var swiper = new Swiper(".scrolling-wrapper", {
+          spaceBetween: 0,
+          freeMode: true,
+          slidesPerView: dependsOnSize(),
+          hashNavigation: {
+              watchState: true,
+           },
+        });
+
+
+
+
+
+
+///////////////////////////// The 01 Wrapper
+
+  filterSelection("all")
+  function filterSelection(c) {
+    var x, i;
+    x = document.getElementsByClassName("filter01");
+    if (c == "all") c = "";
+    for (i = 0; i < x.length; i++) {
+      w3RemoveClass(x[i], "show");
+      if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+    }
+  }
+  
+  function w3AddClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+    }
+  }
+  
+  function w3RemoveClass(element, name) {
+    var i, arr1, arr2;
+    arr1 = element.className.split(" ");
+    arr2 = name.split(" ");
+    for (i = 0; i < arr2.length; i++) {
+      while (arr1.indexOf(arr2[i]) > -1) {
+        arr1.splice(arr1.indexOf(arr2[i]), 1);     
+      }
+    }
+    element.className = arr1.join(" ");
+  }
+  
+  // Add active class to the current button (highlight it)
+  var btnContainer = document.getElementById("BtnContainer01");
+  var btns = btnContainer.getElementsByClassName("btn01");
+  for (var i = 0; i < btns.length; i++) {
+    btns[i].addEventListener("click", function(){
+      var current = document.getElementsByClassName("active");
+      current[0].className = current[0].className.replace(" active", "");
+      this.className += " active";
+    });
+  }
+
+
+
+
+
+
+  // When the user scrolls down 20px from the top of the document, slide down the navbar
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar-bg").style.top = "0";
+  } else {
+    document.getElementById("navbar-bg").style.top = "-100px";
+  }
+}
+
+
+
+
+    document.onreadystatechange = function() {
+             if (document.readyState !== "complete") {
+                 document.querySelector(
+                   "body").style.visibility = "";
+                 document.querySelector(
+                   "#loader").style.visibility = "visible";
+             } else {
+                 document.querySelector(
+                   "#loader").style.display = "none";
+                 document.querySelector(
+                   "body").style.visibility = "";
+             }
+         };
+
+
+
+  </script>
+
+
+
+</body>
+</html>
