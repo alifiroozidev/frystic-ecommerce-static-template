@@ -1,0 +1,1 @@
+# frystic-ecommerce-static-template
