@@ -115,7 +115,7 @@ body {
     right: -10%;
     top: -10%;
     filter:  saturate(1.5) blur(50px) brightness(0.8);
-    background: url(/img/liq.gif);
+    background: url(liq.gif);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
